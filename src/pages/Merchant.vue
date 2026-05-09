@@ -308,8 +308,9 @@ import { Modal } from 'ant-design-vue'
 import axios from 'axios'
 
 // API 基础地址
+const API_BASE = import.meta.env.VITE_API_URL || 'https://risk-backend-production.up.railway.app'
 const api = axios.create({
-    baseURL: '/api',
+    baseURL: API_BASE + '/api',
     timeout: 30000
 })
 
